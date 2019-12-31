@@ -1,0 +1,171 @@
+body  
+{
+	background-color: white;
+   	background-image: url("../Images/BackgroundMotorbike.jpg");  
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+
+h1 {
+	margin-left: 10px;
+}
+
+#basket{
+
+	font-size: 20px;
+	float: right;
+	margin-right: 100px;
+}
+
+#basketbutton {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#basketHome {
+    position: relative;
+    display: inline-block;
+	color: #333;
+}
+
+#basket-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#basket-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#basket-content a:hover {background-color: #3e8e41}
+
+#basketHome:hover #basket-content {
+    display: block;
+	height: 500px;
+	width: 400px;
+}
+
+#basketHome:hover #basketbutton {
+    background-color: #3e8e41;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 0;
+    background-color: #333; 
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.container {
+	width: 1000px;
+	height: 700px;
+	border: 5px solid #333;
+	border-radius: 5px;
+	color: black;
+	display: block;
+	padding: 20px 20px;
+	margin: 20px;
+	font-size: 20px;
+	float: left;
+}
+
+aside {
+	width: 600px;
+	height: 700px;
+	border: 5px solid #333;
+	border-radius: 5px;
+	color: black;
+	display: block;
+	padding: 20px 20px;
+	margin: 20px;
+	font-size: 20px;
+	float: right;
+}
+
+h2 {
+	text-align: center;
+	font-size: 275%;
+	color: #E5E5E5;
+	margin: 45% 0;
+}
+
+.Homebutton {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.Home {
+    position: relative;
+    display: inline-block;
+	color: #333;
+}
+
+.Home-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.Home-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.Home-content a:hover {background-color: #3e8e41}
+
+.Home:hover .Home-content {
+    display: block;
+}
+
+.Home:hover .Homebutton {
+    background-color: #3e8e41;
+}
+
+
+#carContainer {
+	width: 2000x;
+	height: 2000px;
+	border: 5px solid #333;
+	border-radius: 5px;
+	color: black;
+	display: block;
+	padding: 20px 20px;
+	margin: 20px;
+	font-size: 20px;
+	margin-top: 1000px;
+}
+
+#sports {
+	width: 255px;
+	height: 180px;
+	background: url("../Images/Sports.jpg");
+	border-radius: 20px;
+}
+
+footer {
+	margin: 0;
+}

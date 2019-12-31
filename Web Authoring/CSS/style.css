@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* @font-face { */
+  /* font-family: 'Open Sans'; */
+  /* font-style: normal; */
+  /* font-weight: 300; */
+  /* src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2'); */
+  /* unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; */
+/* } */
+/* latin-ext */
+
+body{
+	font-family: 'Hepta Slab', serif;
+	/* font-family: 'Open Sans'; */
+	/* margin:0; */
+	/* padding:0; */
+	/* height:100%; */
+	/* background:#fafafa; */
+}
+.products{
+			list-style:none;
+			margin-right:600px;
+			padding:0px;
+			height:100%;
+			margin-top: 300px;
+		}
+		.products li{
+			display:inline;
+			float:left;
+			margin:20px;
+			position:relative;
+		}
+		.item{
+			display:block;
+			text-decoration:none;
+		}
+		
+		.products a:hover {background-color: #3e8e41}
+		
+		.item img{
+			   border: 1px solid #eee;
+    /* border-radius: 50%; */
+    /* padding: 20px; */
+    background-color: #fff;
+    max-width: 220px;
+		}
+		.item p{
+			margin:0;
+			font-weight:bold;
+			text-align:center;
+			color:#c3c3c3;
+
+		}
+		.cart{
+	/* position: fixed; */
+    /* right: 0; */
+    /* top: 10px; */
+    /* width: 300px; */
+    /* height: 100%; */
+    /* background: #222; */
+    padding: 0px 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    bottom: 10px;
+	color:#fff;
+		}
+		h1{
+			text-align:left;
+			color:#black;
+			font-size: 45px;
+			font-weight: bold;
+		}
+		h2{
+			position:absolute;
+			font-size:16px;
+			left:10px;
+			bottom:20px;
+			color:#555;
+		}
+		.total{
+			margin:0;
+			text-align:right;
+			padding-right:20px;
+			margin-top: 10px;
+		}
+		.priceHolder{
+	
+    bottom: 20px;
+    background-color: #333;
+    padding: 5px;
+
+    left: 50%;
+		}
+
+

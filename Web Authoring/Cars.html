@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/CSS.css">
+	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="Javascript/Basket.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="JavaScript/main.js"></script>
+	<title>Vehicle Valley - Home</title>
+</head>
+
+<body>
+	<div id="signup">
+		Sign up
+		<br>
+		<input v-model="password" style="font-family: 'Hepta Slab', serif" type="text" name="Password" value="" />
+		<div v-show='password.length < 6' style="display: inline; color: red"><small><strong>Password must be seven
+					characters or higher</strong></small></div>
+		</br>
+		<button :class="password.length < 6 ? 'cartdisabled' : 'cartbutton'" style="font-family: 'Hepta Slab', serif"
+			onclick="alert('signed up')" :disabled="password.length < 6">Sign up</button>
+	</div>
+	<div id="basket">
+		<div id="basketHome">
+			<button id="basketbutton" onclick="openNav()">Basket</button>
+			<div id="basket-content">
+			</div>
+		</div>
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="cart">
+			<h1>Shopping Cart</h1>
+			<div style="background:#fff">
+				<table id="cartcontent" fitColumns="true" style="width:300px;height:auto;">
+					<thead>
+						<tr>
+							<th field="name" width=140>Name</th>
+							<th field="quantity" width=60 align="right">Quantity</th>
+							<th field="price" width=60 align="right">Price</th>
+							<!-- <th field="col" width=60 align="right">Colour</th> -->
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<p class="total">Total: £0</p>
+			<button :class="totalcost == 0 ? 'cartdisabled' : 'cartbutton'" id="checkout"
+				v-bind:disabled="totalcost == 0">Checkout</button>
+			<button class="cartbutton" onclick="clearBasket()">Clear Basket</button>
+		</div>
+	</div>
+
+	<header>
+		<h1>Vehicle Valley</h1>
+		<div id='logobox'>
+			<img src="images/Logo.png" width="300px" height="300px" />
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<div class="Home">
+				<button class="Homebutton">Home</button>
+				<div class="Home-content">
+					<a href="Home.html">Home</a>
+				</div>
+			</div>
+			<div class="Home">
+				<button class="Homebutton">Land vehicles</button>
+				<div class="Home-content">
+					<a href="Cars.html">Cars</a>
+					<a href="Motorbikes.html">Motorbikes</a>
+					<a href="#">Vans</a>
+				</div>
+			</div>
+			<div class="Home">
+				<button class="Homebutton">Company details</button>
+				<div class="Home-content">
+					<a href="#">Policies and agreements</a>
+					<a href="deliveries.html">Delivery information</a>
+					<a href="Contacts.html">Contacts</a>
+					<a href="DEMO.html">DEMO</a>
+				</div>
+			</div>
+		</ul>
+	</nav>
+
+	<section>
+		<p class="container">
+			Cars are the most popular sector in our business, with good reason; We have a wide range of cars from Sports
+			to SUVs. We also have a small range of classics cars for collectors. Check out some of our cars on sale down
+			below.
+		</p>
+	</section>
+
+	<script>
+		vue = new Vue({
+			el: "#checkout",
+			data: {
+				totalcost: null
+			},
+			created() {
+				console.log('ok');
+				data.rows = JSON.parse(localStorage.getItem('cartarray'));
+				this.totalcost = data.rows.length;
+				console.log(data.rows.length);
+				console.log(this.totalcost);
+			},
+			methods: {
+				updateTotal: function (x) {
+					this.totalcost = x
+				},
+				clear: function () {
+					this.totalcost = 0
+				}
+			}
+		})
+
+		vue2 = new Vue({
+			el: "#signup",
+			data: {
+				password: ""
+			}
+		})
+	</script>
+
+	<ul class="products">
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="55000">Car 1</p>
+					<!-- data-col="" -->
+					<p>Price:£55,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="340000">Car 2</p>
+					<p>Price:£360,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="26000">Car 3</p>
+					<p>Price:£26,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="6000">Car 4</p>
+					<p>Price:6000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="13000">Car 5</p>
+					<p>Price:£13,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="105000">Car 6</p>
+					<p>Price:£105,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="25000">Car 7</p>
+					<p>Price:£25,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="20000">Car 8</p>
+					<p>Price:£20,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="245000">Car 9</p>
+					<p>Price:£245,000</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="item">
+				<img src="images/placeholder.jpg" />
+				<div class="priceHolder">
+					<p class="title" data="68000">Car 10</p>
+					<p>Price:£68,000</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+	<section class="parallax">
+		<div class="parallax-inner">
+
+		</div>
+
+		</div>
+	</section>
+
+	<footer>
+	</footer>
+</body>
+
+</html>

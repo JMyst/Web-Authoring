@@ -1,0 +1,242 @@
+body  
+{
+	background-color: white;
+   	background-image: url("../Images/BackgroundHome.png");  
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+
+#logobox {
+  position: absolute;
+  left: -40px;
+  top: -85px;
+  z-index: -1;
+}
+
+h1 {
+	margin-top: 60px;
+	margin-left: 10px;
+}
+
+#basket{
+
+	font-size: 20px;
+	float: right;
+	margin-right: 200px;
+}
+
+#basketbutton {
+    background-color: #333;
+    color: white;
+	width: 140px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	font-family: 'Hepta Slab', serif;
+}
+
+#basketHome {
+    position: relative;
+    display: inline-block;
+	color: #333;
+}
+
+#basket-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#basket-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#basket-content a:hover {background-color: #3e8e41}
+
+/* #basketHome:hover #basket-content { */
+    /* display: block; */
+	/* height: 500px; */
+	/* width: 400px; */
+/* } */
+
+.sidenav {
+  height: 60%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#basketHome:hover #basketbutton {
+    background-color: #3e8e41;
+}
+
+#signup
+{
+	color: white;
+	margin-left: 950px;
+	position: absolute;
+	display: inline;
+	margin-top: -15px;
+}
+
+.cartbutton
+{
+	font-family: 'Hepta Slab', serif;
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartdisabled
+{
+	font-family: 'Hepta Slab', serif;
+    background-color: #1a1a1a;
+    color: gray;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.cartbutton:hover {
+    background-color: #3e8e41;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0px;
+	margin-bottom: 0px;
+    padding: 0;
+    background-color: #333; 
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.container {
+	width: 100%;
+	height: 200px;
+	/* border: 5px solid #333; */
+	border-radius: 0px;
+	margin-top: -200px;
+	position: relative;
+	color: white;
+	z-index: -2;
+	display: block;
+	padding: 250px 20px;
+	font-size: 20px;
+	float: left;
+	background-color: #404040;
+}
+
+aside {
+	width: 600px;
+	height: 700px;
+	display: block;
+	padding: 20px 20px;
+	margin: 20px;
+	font-size: 20px;
+	float: right;
+	border-radius: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	color: white;
+	padding: 20px 20px;
+	background-color: #404040;
+}
+
+h2 {
+	text-align: center;
+	font-size: 275%;
+	color: #E5E5E5;
+	margin: 45% 0;
+}
+
+.Homebutton {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	font-family: 'Hepta Slab', serif;
+}
+
+body {
+	/* font-family: 'Hepta Slab', serif; */
+}
+
+.Home {
+    position: relative;
+    display: inline-block;
+	color: #333;
+}
+
+.Home-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.Home-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.Home-content a:hover {background-color: #3e8e41}
+
+.Home:hover .Home-content {
+    display: block;
+}
+
+.Home:hover .Homebutton {
+    background-color: #3e8e41;
+}
+
+.parallax {
+	background: url("../Images/Mountain.jpeg") repeat fixed 100%;
+	background-size: cover;
+}
+
+footer {
+	margin: 0;
+}
